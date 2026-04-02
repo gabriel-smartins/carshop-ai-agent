@@ -1,5 +1,6 @@
 import Fastify from "fastify";
 import cors from "@fastify/cors";
+import { carsRoutes } from "./modules/cars/cars.routes.js";
 
 export async function buildApp() {
   const app = Fastify({
@@ -13,6 +14,8 @@ export async function buildApp() {
   app.get("/teste", async () => {
     return { message: "Hello, World!" };
   });
+
+  app.register(carsRoutes);
 
   return app;
 }
