@@ -1,5 +1,10 @@
 # 🚗 Carshop Backend - Documentação Completa
 
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![Fastify](https://img.shields.io/badge/fastify-%23000000.svg?style=for-the-badge&logo=fastify&logoColor=white)
+![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+
 Backend REST API para gerenciamento de automóveis. Construído com **Fastify**, **Drizzle ORM** e **PostgreSQL**, seguindo arquitetura em camadas com validação de tipos end-to-end.
 
 ---
@@ -346,8 +351,9 @@ export async function carsRoutes(app: FastifyInstance) {
 ### Endpoints Disponíveis
 
 ```
-GET  /teste                         # Health check
+GET  /health                        # Health check
 POST /cars                          # Criar novo carro
+POST /cars/search                   # Busca inteligente com IA (OpenAI)
 ```
 
 ### POST /cars - Criar Carro
