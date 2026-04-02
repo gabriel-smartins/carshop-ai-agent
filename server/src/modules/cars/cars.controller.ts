@@ -13,8 +13,8 @@ export class CarsController {
   };
 
   searchCars = async (request: FastifyRequest, reply: FastifyReply) => {
-    const query = searchRequestSchema.parse(request.query);
-    const result = await this.carsService.searchCars(query);
+    const body = searchRequestSchema.parse(request.body);
+    const result = await this.carsService.searchCars(body);
 
     return reply.status(200).send(result);
   };
